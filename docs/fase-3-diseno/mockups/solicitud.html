@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitar adopción de Luna · Protetec</title>
+  <meta name="description" content="Formulario de solicitud de adopción en Protetec.">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="icon" href="assets/logo-protetec-negro.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="mock-banner">Maqueta de diseño · Fase 3 · Pantalla 4 de 15 · Formulario por secciones con resumen de errores</div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/logo-protetec-negro.svg" alt="" width="32" height="32">Protetec</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html" aria-current="page">Mis solicitudes</a>
+        <a href="perfil.html">Mi cuenta</a>
+      </nav>
+      <div class="header-actions">
+        <span class="avatar" aria-hidden="true">CP</span>
+        <span class="small" style="display:none" id="usuario-nombre">Carlos Pérez</span>
+        <a class="btn btn--sm" href="acceso.html">Cerrar sesión</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="menu-movil" class="mobile-nav" data-mobile-nav data-open="false" aria-label="Navegación móvil">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html" aria-current="page">Mis solicitudes</a>
+        <a href="perfil.html">Mi cuenta</a>
+        <a href="acceso.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container container--form section">
+    <ol class="breadcrumb">
+      <li><a href="catalogo.html">Animales</a></li>
+      <li><a href="ficha.html">Luna</a></li>
+      <li><span aria-current="page">Solicitud</span></li>
+    </ol>
+
+    <h1>Solicitar la adopción de Luna</h1>
+    <p class="lead">La Protectora de Valencia revisará tus respuestas. Puedes seguir el estado desde “Mis solicitudes”.</p>
+
+    <!-- Resumen del animal -->
+    <div class="card mb-6">
+      <div class="card__body row" style="align-items:center">
+        <div class="photo photo--a photo--thumb" role="img" aria-label="Luna, perra mestiza de pelo claro"></div>
+        <div style="flex:1;min-width:180px">
+          <p class="mb-0" style="font-weight:600">Luna · Perra mestiza</p>
+          <p class="small muted mb-0">2 años · Mediana · Protectora de Valencia</p>
+        </div>
+        <a class="btn btn--sm" href="ficha.html">Ver ficha</a>
+      </div>
+    </div>
+
+    <!-- Resumen de errores -->
+    <div class="alert alert--error" role="alert" tabindex="-1">
+      <div>
+        <strong>Revisa 2 campos antes de enviar</strong>
+        <ul>
+          <li><a href="#motivacion">La motivación debe tener al menos 50 caracteres</a></li>
+          <li><a href="#consentimiento">Debes aceptar la política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <form data-demo-form novalidate>
+      <fieldset>
+        <legend>1 · Tu vivienda</legend>
+        <div class="form-grid form-grid--2">
+          <div class="field">
+            <label class="label" for="vivienda">Tipo de vivienda <span class="req" aria-hidden="true">*</span><span class="visually-hidden">(obligatorio)</span></label>
+            <select class="select" id="vivienda" name="vivienda" required aria-describedby="vivienda-hint">
+              <option value="">Selecciona una opción</option>
+              <option value="PISO" selected>Piso</option>
+              <option value="CASA">Casa</option>
+              <option value="OTRO">Otro</option>
+            </select>
+            <p class="hint" id="vivienda-hint">Nos ayuda a valorar si el animal se adapta al espacio.</p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="horasSolo">Horas al día que estará solo <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" id="horasSolo" name="horasSolo" type="number" inputmode="numeric" min="0" max="24" value="6" required>
+            <p class="hint">Entre 0 y 24. Cuenta las horas de trabajo y desplazamientos.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="check">
+            <input type="checkbox" name="viviendaAlquilada" checked>
+            <span>La vivienda es de alquiler</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label class="check">
+            <input type="checkbox" name="permiteAnimales" checked>
+            <span>El contrato de alquiler permite animales de compañía</span>
+          </label>
+          <p class="hint">Obligatorio cuando la vivienda es de alquiler.</p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2 · Convivencia</legend>
+        <div class="field">
+          <label class="check">
+            <input type="checkbox" name="conviveConNinos">
+            <span>Hay niños o niñas en el hogar</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label class="label" for="otrasMascotas">Otras mascotas en casa</label>
+          <textarea class="textarea" id="otrasMascotas" name="otrasMascotas" maxlength="500" style="min-height:80px" aria-describedby="otras-hint">Un gato de 6 años, vacunado y esterilizado.</textarea>
+          <p class="hint" id="otras-hint">Especie, edad y si están vacunados. Máximo 500 caracteres.</p>
+        </div>
+
+        <div class="field">
+          <label class="label" for="experiencia">Experiencia previa con animales</label>
+          <textarea class="textarea" id="experiencia" name="experienciaPrevia" maxlength="1000" style="min-height:80px">Tuve un perro durante 12 años.</textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3 · Tu motivación</legend>
+        <div class="field">
+          <label class="label" for="motivacion">¿Por qué quieres adoptar a Luna? <span class="req" aria-hidden="true">*</span><span class="visually-hidden">(obligatorio)</span></label>
+          <textarea class="textarea" id="motivacion" name="motivacion" required minlength="50" maxlength="1000"
+                    aria-invalid="true" aria-describedby="motivacion-error motivacion-hint">Me gustan mucho los perros.</textarea>
+          <p class="error-msg" id="motivacion-error">Debe tener al menos 50 caracteres. Llevas 26.</p>
+          <p class="hint" id="motivacion-hint">Cuéntanos tu rutina, quién cuidará al animal y qué harás en vacaciones. Entre 50 y 1.000 caracteres.</p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>4 · Consentimiento</legend>
+        <div class="field">
+          <label class="check" id="consentimiento">
+            <input type="checkbox" name="consentimientoRgpd" required aria-invalid="true" aria-describedby="consentimiento-error">
+            <span>He leído y acepto la <a href="error.html">política de privacidad</a> y el tratamiento de mis datos para gestionar esta solicitud. <span class="req" aria-hidden="true">*</span></span>
+          </label>
+          <p class="error-msg" id="consentimiento-error">Debes aceptar la política de privacidad para enviar la solicitud.</p>
+        </div>
+
+        <div class="alert alert--info">
+          <div>
+            <strong>Qué haremos con tus datos</strong>
+            Se comparten con la protectora del animal para valorar la adopción. No se usan para publicidad. Puedes solicitar su supresión desde tu cuenta.
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button class="btn btn--primary" type="submit" data-submit>Enviar solicitud</button>
+        <a class="btn" href="ficha.html">Cancelar</a>
+        <p class="small muted mb-0" style="flex:1;text-align:right">Los campos con <span aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> son obligatorios.</p>
+      </div>
+
+      <div class="alert alert--success mt-5" data-form-status hidden tabindex="-1">
+        <div>
+          <strong>Simulación: solicitud enviada</strong>
+          En la aplicación real esto llevaría a la pantalla de confirmación con el número de solicitud.
+          <div class="mt-3"><a class="btn btn--sm" href="confirmacion.html">Ver la confirmación</a></div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Estados del formulario -->
+    <hr>
+    <h2>Estados del formulario</h2>
+    <div class="demo-grid">
+      <div class="card"><div class="card__body">
+        <h3 style="font-size:var(--fs-h4)">Envío en curso</h3>
+        <p class="small mb-3">El botón se desactiva y muestra el indicador; se evita el doble envío.</p>
+        <button class="btn btn--primary is-loading" type="button" aria-busy="true">Enviando…</button>
+      </div></div>
+      <div class="card"><div class="card__body">
+        <h3 style="font-size:var(--fs-h4)">Animal ya no disponible</h3>
+        <p class="small mb-3">409 del servidor: no se pierde lo escrito, se ofrece volver al catálogo.</p>
+        <div class="alert alert--warn mb-0"><div><strong>Luna ya tiene una solicitud en curso</strong>Puedes ver otros animales con características similares.</div></div>
+      </div></div>
+      <div class="card"><div class="card__body">
+        <h3 style="font-size:var(--fs-h4)">Sesión caducada</h3>
+        <p class="small mb-3">Se avisa y se vuelve al acceso conservando el destino.</p>
+        <div class="alert alert--info mb-0"><div><strong>Tu sesión ha caducado</strong>Vuelve a entrar y te devolvemos a este formulario.</div></div>
+      </div></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff"><img class="brand__mark" src="assets/logo-protetec-blanco.svg" alt="" width="32" height="32">Protetec</a>
+          <p class="mt-3" style="color:#a8c4b9;max-width:32ch">Adopciones responsables con cartilla digital. Proyecto Intermodular · 2.º DAW.</p>
+        </div>
+        <div><h4>Adoptar</h4><ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#como-funciona">Cómo adoptar</a></li><li><a href="mis-solicitudes.html">Mis solicitudes</a></li></ul></div>
+        <div><h4>Protectoras</h4><ul><li><a href="panel.html">Panel</a></li><li><a href="cartilla.html">Cartilla digital</a></li><li><a href="admin.html">Administración</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="error.html">Privacidad</a></li><li><a href="error.html">Cookies</a></li><li><a href="error.html">Accesibilidad</a></li></ul></div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Protetec · Guillermo Morcillo, Iker Valls, Xavi Roca</span>
+        <span>Maqueta de diseño, sin funcionalidad real</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mock-index" aria-label="Índice de maquetas de la fase 3">
+    <div class="container">
+      <p class="mock-index__title">Maquetas · 15 pantallas</p>
+      <div class="chip-row" style="margin:0">
+        <a class="chip" href="index.html">1 · Inicio</a>
+        <a class="chip" href="catalogo.html">2 · Catálogo</a>
+        <a class="chip" href="ficha.html">3 · Ficha</a>
+        <a class="chip" href="solicitud.html" aria-current="page">4 · Solicitud</a>
+        <a class="chip" href="acceso.html">5 · Acceso</a>
+        <a class="chip" href="confirmacion.html">6 · Confirmación</a>
+        <a class="chip" href="mis-solicitudes.html">7 · Mis solicitudes</a>
+        <a class="chip" href="panel.html">8 · Panel</a>
+        <a class="chip" href="panel-animales.html">9 · Animales</a>
+        <a class="chip" href="cartilla.html">10 · Cartilla</a>
+        <a class="chip" href="panel-solicitudes.html">11 · Solicitudes</a>
+        <a class="chip" href="admin.html">12 · Admin</a>
+        <a class="chip" href="error.html">13 · Error</a>
+        <a class="chip" href="perfil.html">14 · Perfil</a>
+        <a class="chip" href="mi-cartilla.html">15 · Mi cartilla</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada · Protetec</title>
+  <meta name="description" content="Página de error de Protetec: 404, 500, sin permisos y sesión caducada.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="icon" href="assets/logo-protetec-negro.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="mock-banner">Maqueta de diseño · Fase 3 · Pantalla 13 de 15 · Cuatro estados de error en una sola plantilla</div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/logo-protetec-negro.svg" alt="" width="32" height="32">Protetec</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Animales</a>
+        <a href="index.html#como-funciona">Cómo adoptar</a>
+        <a href="acceso.html">Acceder</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm" href="catalogo.html">Ver animales</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="menu-movil" class="mobile-nav" data-mobile-nav data-open="false" aria-label="Navegación móvil">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Animales</a>
+        <a href="index.html#como-funciona">Cómo adoptar</a>
+        <a href="acceso.html">Acceder</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="section">
+    <div class="container container--narrow">
+      <!-- Estado activo: 404 -->
+      <div class="card">
+        <div class="card__body" style="padding:var(--s-7);text-align:center">
+          <p class="badge badge--neutral mb-4" style="font-size:var(--fs-sm)">Error 404</p>
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--primary-100);color:var(--primary-900);display:grid;place-items:center;font-size:1.75rem;font-weight:700;margin:0 auto var(--s-5)" aria-hidden="true">?</div>
+          <h1>Esta página no existe</h1>
+          <p class="lead" style="margin-inline:auto">Puede que el enlace esté mal escrito o que el animal ya haya encontrado familia y su ficha se haya retirado del catálogo.</p>
+
+          <form class="searchbar mt-5" role="search" aria-label="Buscar animales" action="catalogo.html" method="get" style="margin-inline:auto">
+            <label class="visually-hidden" for="q-error">Buscar por nombre, raza o protectora</label>
+            <input class="input" id="q-error" name="q" type="search" placeholder="Nombre, raza o protectora">
+            <button class="btn btn--primary" type="submit">Buscar</button>
+          </form>
+
+          <div class="row mt-6" style="justify-content:center">
+            <a class="btn btn--primary" href="catalogo.html">Ver el catálogo</a>
+            <a class="btn" href="index.html">Volver al inicio</a>
+          </div>
+
+          <p class="small muted mt-5 mb-0">Si crees que es un fallo, <a href="mailto:hola@protetec.example">escríbenos</a> con la dirección que intentabas abrir.</p>
+        </div>
+        <div class="card__footer">
+          <p class="small muted mb-0">La URL se registra de forma anónima para detectar enlaces rotos. No se guarda tu identidad.</p>
+        </div>
+      </div>
+
+      <!-- Variantes -->
+      <hr>
+      <h2>Otros estados de error</h2>
+      <p class="muted">La misma plantilla sirve para los cuatro casos; cambian el código, el mensaje y las acciones disponibles. El diseño evita dos cosas: culpar al usuario y dejarle sin salida.</p>
+
+      <div class="stack-lg mt-5">
+        <!-- 500 -->
+        <div class="card">
+          <div class="card__body">
+            <div class="row row--between row--top">
+              <div>
+                <p class="badge badge--danger mb-3">Error 500</p>
+                <h3 style="font-size:var(--fs-h4)">Algo ha fallado en nuestros servidores</h3>
+              </div>
+            </div>
+            <p class="small muted">No es culpa tuya y no se ha guardado nada a medias. El equipo recibe el aviso automáticamente con un identificador de incidencia.</p>
+            <div class="alert alert--info">
+              <div>
+                <strong>Identificador de incidencia: INC-2026-1115-0842</strong>
+                Cítalo si escribes al soporte: permite localizar exactamente qué pasó.
+              </div>
+            </div>
+            <div class="row">
+              <button class="btn btn--primary" type="button">Reintentar</button>
+              <a class="btn" href="index.html">Ir al inicio</a>
+            </div>
+            <p class="small muted mt-4 mb-0">Si estabas rellenando la solicitud de adopción, tus respuestas se conservan en este navegador durante una hora.</p>
+          </div>
+        </div>
+
+        <!-- 403 -->
+        <div class="card">
+          <div class="card__body">
+            <p class="badge badge--warn mb-3">Sin permisos · 403</p>
+            <h3 style="font-size:var(--fs-h4)">Esta zona es solo para personal de protectora</h3>
+            <p class="small muted">Has iniciado sesión como <strong>adoptante</strong>. El panel de gestión, la cartilla clínica y la administración requieren otro rol.</p>
+            <div class="alert alert--warn">
+              <div>
+                <strong>Por qué lo ves así</strong>
+                La interfaz oculta los enlaces, pero el servidor también comprueba el rol: ninguna ruta <code>/api/v1/admin/*</code> responde a un rol distinto de <code>ADMIN</code> (CA-10.4).
+              </div>
+            </div>
+            <div class="row">
+              <a class="btn btn--primary" href="mis-solicitudes.html">Ir a mis solicitudes</a>
+              <a class="btn" href="catalogo.html">Ver animales</a>
+              <a class="btn btn--ghost" href="acceso.html">Entrar con otra cuenta</a>
+            </div>
+            <p class="small muted mt-4 mb-0">¿Gestionas una protectora y necesitas acceso? La cuenta la crea la administración de la plataforma; no hay registro público con ese rol (ADR-05).</p>
+          </div>
+        </div>
+
+        <!-- 401 -->
+        <div class="card">
+          <div class="card__body">
+            <p class="badge badge--info mb-3">Sesión caducada · 401</p>
+            <h3 style="font-size:var(--fs-h4)">Tu sesión ha caducado</h3>
+            <p class="small muted">Por seguridad cerramos la sesión tras un tiempo sin actividad. Vuelve a entrar y te devolvemos exactamente a donde estabas.</p>
+            <div class="alert alert--info">
+              <div>
+                <strong>Volverás a: Mis solicitudes</strong>
+                El destino se conserva en la URL de acceso; no tienes que buscar la pantalla otra vez.
+              </div>
+            </div>
+            <div class="row">
+              <a class="btn btn--primary" href="acceso.html">Volver a entrar</a>
+              <a class="btn" href="catalogo.html">Seguir explorando</a>
+            </div>
+          </div>
+          <div class="card__footer">
+            <p class="small muted mb-0">Las cookies de sesión son <code>HttpOnly</code> y revocables: al cerrar sesión el token deja de ser válido en el servidor, no solo en el navegador (ADR-10).</p>
+          </div>
+        </div>
+
+        <!-- 404 sin imagen / móvil -->
+        <div class="card">
+          <div class="card__body">
+            <p class="badge badge--neutral mb-3">Detalle de implementación · 404</p>
+            <h3 style="font-size:var(--fs-h4)">Un animal adoptado responde 404, no 410</h3>
+            <p class="small mb-0">Cuando una ficha deja de estar disponible, la API responde <code>404</code> sin distinguir entre “no existe” y “ya no está publicado”. Así no se filtra qué animales han sido adoptados ni cuándo (CA-01.5). El catálogo tampoco los enlaza.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reglas de diseño de errores -->
+      <hr>
+      <h2>Cómo se escriben los errores</h2>
+      <div class="demo-grid">
+        <div class="card"><div class="card__body">
+          <h3 style="font-size:var(--fs-h4)">Qué ha pasado</h3>
+          <p class="small muted mb-0">En una frase, sin códigos internos ni jerga. El código HTTP va como etiqueta, no como titular.</p>
+        </div></div>
+        <div class="card"><div class="card__body">
+          <h3 style="font-size:var(--fs-h4)">Qué puedes hacer</h3>
+          <p class="small muted mb-0">Siempre hay al menos una acción útil: reintentar, volver, buscar o entrar. Nunca un callejón sin salida.</p>
+        </div></div>
+        <div class="card"><div class="card__body">
+          <h3 style="font-size:var(--fs-h4)">Qué no se muestra</h3>
+          <p class="small muted mb-0">Trazas, SQL, rutas del servidor ni datos personales de otras cuentas. El identificador de incidencia basta para soporte.</p>
+        </div></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff"><img class="brand__mark" src="assets/logo-protetec-blanco.svg" alt="" width="32" height="32">Protetec</a>
+          <p class="mt-3" style="color:#a8c4b9;max-width:32ch">Adopciones responsables con cartilla digital. Proyecto Intermodular · 2.º DAW.</p>
+        </div>
+        <div><h4>Adoptar</h4><ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#como-funciona">Cómo adoptar</a></li><li><a href="mis-solicitudes.html">Mis solicitudes</a></li></ul></div>
+        <div><h4>Protectoras</h4><ul><li><a href="panel.html">Panel</a></li><li><a href="cartilla.html">Cartilla digital</a></li><li><a href="admin.html">Administración</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="error.html">Privacidad</a></li><li><a href="error.html">Cookies</a></li><li><a href="error.html">Accesibilidad</a></li></ul></div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Protetec · Guillermo Morcillo, Iker Valls, Xavi Roca</span>
+        <span>Maqueta de diseño, sin funcionalidad real</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mock-index" aria-label="Índice de maquetas de la fase 3">
+    <div class="container">
+      <p class="mock-index__title">Maquetas · 15 pantallas</p>
+      <div class="chip-row" style="margin:0">
+        <a class="chip" href="index.html">1 · Inicio</a>
+        <a class="chip" href="catalogo.html">2 · Catálogo</a>
+        <a class="chip" href="ficha.html">3 · Ficha</a>
+        <a class="chip" href="solicitud.html">4 · Solicitud</a>
+        <a class="chip" href="acceso.html">5 · Acceso</a>
+        <a class="chip" href="confirmacion.html">6 · Confirmación</a>
+        <a class="chip" href="mis-solicitudes.html">7 · Mis solicitudes</a>
+        <a class="chip" href="panel.html">8 · Panel</a>
+        <a class="chip" href="panel-animales.html">9 · Animales</a>
+        <a class="chip" href="cartilla.html">10 · Cartilla</a>
+        <a class="chip" href="panel-solicitudes.html">11 · Solicitudes</a>
+        <a class="chip" href="admin.html">12 · Admin</a>
+        <a class="chip" href="error.html" aria-current="page">13 · Error</a>
+        <a class="chip" href="perfil.html">14 · Perfil</a>
+        <a class="chip" href="mi-cartilla.html">15 · Mi cartilla</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

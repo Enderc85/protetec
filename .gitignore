@@ -1,0 +1,18 @@
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Entornos y dependencias
+node_modules/
+.env
+.env.*
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Salidas temporales
+*.tmp
+*.log

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animales en adopción · Protetec</title>
+  <meta name="description" content="Explora los animales en adopción y filtra por especie, edad, tamaño y protectora. Todos con cartilla digital.">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="icon" href="assets/logo-protetec-negro.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="mock-banner">Maqueta de diseño · Fase 3 · Pantalla 2 de 15 · Filtros reflejados en la URL</div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/logo-protetec-negro.svg" alt="" width="32" height="32">Protetec</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" aria-current="page">Animales</a>
+        <a href="index.html#como-funciona">Cómo adoptar</a>
+        <a href="acceso.html">Acceder</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn--primary btn--sm" href="acceso.html">Crear cuenta</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="menu-movil" class="mobile-nav" data-mobile-nav data-open="false" aria-label="Navegación móvil">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" aria-current="page">Animales</a>
+        <a href="index.html#como-funciona">Cómo adoptar</a>
+        <a href="acceso.html">Acceder</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="page-head">
+      <div class="container">
+        <h1>Animales en adopción</h1>
+        <p>137 animales de 20 protectoras. Todos con cartilla digital verificada por su centro.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="split split--panel">
+        <!-- Filtros -->
+        <aside aria-labelledby="titulo-filtros">
+          <div class="card">
+            <div class="card__header">
+              <h2 id="titulo-filtros" style="font-size:var(--fs-h4)">Filtros</h2>
+              <a class="small" href="catalogo.html">Limpiar</a>
+            </div>
+            <div class="card__body filters">
+              <fieldset class="filter-group">
+                <legend>Especie</legend>
+                <label class="filter-option"><input type="checkbox" checked> Perro <span class="muted small">(62)</span></label>
+                <label class="filter-option"><input type="checkbox"> Gato <span class="muted small">(54)</span></label>
+                <label class="filter-option"><input type="checkbox"> Conejo <span class="muted small">(12)</span></label>
+                <label class="filter-option"><input type="checkbox"> Cobaya <span class="muted small">(6)</span></label>
+                <label class="filter-option"><input type="checkbox"> Hurón <span class="muted small">(3)</span></label>
+              </fieldset>
+
+              <fieldset class="filter-group">
+                <legend>Edad</legend>
+                <label class="filter-option"><input type="radio" name="edad"> Cachorro (menos de 1 año)</label>
+                <label class="filter-option"><input type="radio" name="edad"> Joven (1–3 años)</label>
+                <label class="filter-option"><input type="radio" name="edad" checked> Adulto (4–7 años)</label>
+                <label class="filter-option"><input type="radio" name="edad"> Sénior (más de 7)</label>
+                <label class="filter-option"><input type="radio" name="edad"> Cualquiera</label>
+              </fieldset>
+
+              <fieldset class="filter-group">
+                <legend>Tamaño</legend>
+                <label class="filter-option"><input type="checkbox"> Pequeño</label>
+                <label class="filter-option"><input type="checkbox"> Mediano</label>
+                <label class="filter-option"><input type="checkbox"> Grande</label>
+              </fieldset>
+
+              <div>
+                <label class="label" for="protectora">Protectora</label>
+                <select class="select" id="protectora">
+                  <option>Todas las protectoras</option>
+                  <option selected>Protectora de Valencia</option>
+                  <option>Refugio El Almendro</option>
+                  <option>Protectora de Sagunto</option>
+                </select>
+              </div>
+
+              <label class="filter-option"><input type="checkbox" checked> Solo aptos para piso</label>
+
+              <button class="btn btn--primary btn--block" type="button">Aplicar filtros</button>
+            </div>
+          </div>
+
+          <div class="alert alert--info mt-4">
+            <div><strong>¿Buscas un animal concreto?</strong> Usa el buscador del catálogo por nombre o raza.</div>
+          </div>
+        </aside>
+
+        <!-- Resultados -->
+        <section aria-labelledby="titulo-resultados">
+          <h2 id="titulo-resultados" class="visually-hidden">Resultados</h2>
+
+          <div class="toolbar">
+            <p class="mb-0 small muted"><strong>24 animales</strong> · página 1 de 2</p>
+            <div class="row" style="gap:8px">
+              <label class="small muted" for="orden">Ordenar por</label>
+              <select class="select" id="orden" style="width:auto;min-width:180px">
+                <option selected>Más recientes</option>
+                <option>Más antiguos</option>
+                <option>Nombre (A–Z)</option>
+              </select>
+              <button class="btn btn--sm" type="button" aria-expanded="false">Filtros <span aria-hidden="true">(2)</span></button>
+            </div>
+          </div>
+
+          <div class="chip-row">
+            <span class="small muted">Filtros activos:</span>
+            <a class="chip" href="catalogo.html">Perro <span aria-hidden="true">×</span><span class="visually-hidden">Quitar filtro especie</span></a>
+            <a class="chip" href="catalogo.html">Apto para piso <span aria-hidden="true">×</span><span class="visually-hidden">Quitar filtro apto para piso</span></a>
+          </div>
+
+          <ul class="card-grid" style="list-style:none;padding:0;margin:0">
+            <li>
+              <a class="animal-card" href="ficha.html">
+                <div class="animal-card__media">
+                  <div class="photo photo--a photo--card" role="img" aria-label="Luna, perra mestiza de pelo claro, sentada en el jardín"></div>
+                  <span class="animal-card__badge">Disponible</span>
+                </div>
+                <div class="animal-card__body">
+                  <h3 class="animal-card__title">Luna</h3>
+                  <p class="animal-card__meta mb-0">Perra · Mestiza · 2 años · Mediana</p>
+                  <div class="row" style="gap:8px"><span class="badge badge--ok">Vacunada al día</span><span class="badge badge--neutral">Apta piso</span></div>
+                  <div class="animal-card__footer"><span>Prot. Valencia</span><span aria-hidden="true">Ver ficha →</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="animal-card" href="ficha.html">
+                <div class="animal-card__media">
+                  <div class="photo photo--e photo--card" role="img" aria-label="Rocco, perro grande de pelaje negro, sentado en el patio"></div>
+                  <span class="animal-card__badge">Disponible</span>
+                </div>
+                <div class="animal-card__body">
+                  <h3 class="animal-card__title">Rocco</h3>
+                  <p class="animal-card__meta mb-0">Perro · Labrador mestizo · 5 años · Grande</p>
+                  <div class="row" style="gap:8px"><span class="badge badge--ok">Vacunado al día</span><span class="badge badge--neutral">Apto piso</span></div>
+                  <div class="animal-card__footer"><span>Prot. Valencia</span><span aria-hidden="true">Ver ficha →</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="animal-card" href="ficha.html">
+                <div class="animal-card__media">
+                  <div class="photo photo--b photo--card" role="img" aria-label="Milo, gato atigrado naranja, tumbado en un cojín"></div>
+                  <span class="animal-card__badge">Disponible</span>
+                </div>
+                <div class="animal-card__body">
+                  <h3 class="animal-card__title">Milo</h3>
+                  <p class="animal-card__meta mb-0">Gato · Atigrado · 4 años · Mediano</p>
+                  <div class="row" style="gap:8px"><span class="badge badge--ok">Vacunado al día</span><span class="badge badge--warn">Sin datos piso</span></div>
+                  <div class="animal-card__footer"><span>Prot. Valencia</span><span aria-hidden="true">Ver ficha →</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="animal-card" href="ficha.html">
+                <div class="animal-card__media">
+                  <div class="photo photo--d photo--card" role="img" aria-label="Trufa, perra de color canela, corriendo en el campo"></div>
+                  <span class="animal-card__badge">Disponible</span>
+                </div>
+                <div class="animal-card__body">
+                  <h3 class="animal-card__title">Trufa</h3>
+                  <p class="animal-card__meta mb-0">Perra · Mestiza · 6 años · Grande</p>
+                  <div class="row" style="gap:8px"><span class="badge badge--ok">Vacunada al día</span><span class="badge badge--neutral">Apta piso</span></div>
+                  <div class="animal-card__footer"><span>Prot. Sagunto</span><span aria-hidden="true">Ver ficha →</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="animal-card" href="ficha.html">
+                <div class="animal-card__media">
+                  <div class="photo photo--c photo--card" role="img" aria-label="Nube, coneja blanca de orejas largas, en el interior de la protectora"></div>
+                  <span class="animal-card__badge">Reservado</span>
+                </div>
+                <div class="animal-card__body">
+                  <h3 class="animal-card__title">Nube</h3>
+                  <p class="animal-card__meta mb-0">Coneja · Enana · 1 año · Pequeña</p>
+                  <div class="row" style="gap:8px"><span class="badge badge--ok">Esterilizada</span><span class="badge badge--info">Reservada</span></div>
+                  <div class="animal-card__footer"><span>El Almendro</span><span aria-hidden="true">Ver ficha →</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="animal-card" href="ficha.html">
+                <div class="animal-card__media">
+                  <div class="photo photo--f photo--card" role="img" aria-label="Canela, perra pequeña de color marrón, en brazos de una voluntaria"></div>
+                  <span class="animal-card__badge">Disponible</span>
+                </div>
+                <div class="animal-card__body">
+                  <h3 class="animal-card__title">Canela</h3>
+                  <p class="animal-card__meta mb-0">Perra · Mestiza · 4 años · Pequeña</p>
+                  <div class="row" style="gap:8px"><span class="badge badge--ok">Vacunada al día</span><span class="badge badge--neutral">Apta piso</span></div>
+                  <div class="animal-card__footer"><span>El Almendro</span><span aria-hidden="true">Ver ficha →</span></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <nav class="pagination" aria-label="Paginación del catálogo">
+            <span class="is-disabled" aria-disabled="true">Anterior</span>
+            <a href="catalogo.html" aria-current="page">1</a>
+            <a href="catalogo.html">2</a>
+            <a href="catalogo.html">Siguiente</a>
+          </nav>
+
+          <!-- Estados del componente: documentación viva -->
+          <hr>
+          <h2 class="mb-4">Estados del catálogo</h2>
+          <p class="small muted">Estos bloques existen para que la implementación no improvise: se diseñan el caso vacío, el de carga y el de error, no solo el caso ideal.</p>
+
+          <h3 class="mt-6">Cargando</h3>
+          <div class="card-grid" aria-hidden="true">
+            <div class="skeleton-card"><div class="skeleton skeleton--media"></div><div class="skeleton-card__body"><div class="skeleton skeleton--title"></div><div class="skeleton skeleton--text"></div><div class="skeleton skeleton--text" style="width:70%"></div></div></div>
+            <div class="skeleton-card"><div class="skeleton skeleton--media"></div><div class="skeleton-card__body"><div class="skeleton skeleton--title"></div><div class="skeleton skeleton--text"></div><div class="skeleton skeleton--text" style="width:70%"></div></div></div>
+            <div class="skeleton-card"><div class="skeleton skeleton--media"></div><div class="skeleton-card__body"><div class="skeleton skeleton--title"></div><div class="skeleton skeleton--text"></div><div class="skeleton skeleton--text" style="width:70%"></div></div></div>
+          </div>
+          <p class="visually-hidden" aria-live="polite">Cargando animales</p>
+
+          <h3 class="mt-6">Sin resultados</h3>
+          <div class="empty">
+            <div class="empty__icon" aria-hidden="true">0</div>
+            <h3>No hay animales con estos filtros</h3>
+            <p>Prueba a ampliar la edad o a quitar el filtro de protectora.</p>
+            <a class="btn btn--primary" href="catalogo.html">Limpiar filtros</a>
+          </div>
+
+          <h3 class="mt-6">Error de carga</h3>
+          <div class="alert alert--error">
+            <div>
+              <strong>No hemos podido cargar el catálogo</strong>
+              Ha fallado la conexión. Tus filtros se conservan.
+              <div class="mt-3"><button class="btn btn--sm" type="button">Reintentar</button></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff"><img class="brand__mark" src="assets/logo-protetec-blanco.svg" alt="" width="32" height="32">Protetec</a>
+          <p class="mt-3" style="color:#a8c4b9;max-width:32ch">Adopciones responsables con cartilla digital. Proyecto Intermodular · 2.º DAW.</p>
+        </div>
+        <div><h4>Adoptar</h4><ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#como-funciona">Cómo adoptar</a></li><li><a href="mis-solicitudes.html">Mis solicitudes</a></li></ul></div>
+        <div><h4>Protectoras</h4><ul><li><a href="panel.html">Panel</a></li><li><a href="cartilla.html">Cartilla digital</a></li><li><a href="admin.html">Administración</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="error.html">Privacidad</a></li><li><a href="error.html">Cookies</a></li><li><a href="error.html">Accesibilidad</a></li></ul></div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Protetec · Guillermo Morcillo, Iker Valls, Xavi Roca</span>
+        <span>Maqueta de diseño, sin funcionalidad real</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mock-index" aria-label="Índice de maquetas de la fase 3">
+    <div class="container">
+      <p class="mock-index__title">Maquetas · 15 pantallas</p>
+      <div class="chip-row" style="margin:0">
+        <a class="chip" href="index.html">1 · Inicio</a>
+        <a class="chip" href="catalogo.html" aria-current="page">2 · Catálogo</a>
+        <a class="chip" href="ficha.html">3 · Ficha</a>
+        <a class="chip" href="solicitud.html">4 · Solicitud</a>
+        <a class="chip" href="acceso.html">5 · Acceso</a>
+        <a class="chip" href="confirmacion.html">6 · Confirmación</a>
+        <a class="chip" href="mis-solicitudes.html">7 · Mis solicitudes</a>
+        <a class="chip" href="panel.html">8 · Panel</a>
+        <a class="chip" href="panel-animales.html">9 · Animales</a>
+        <a class="chip" href="cartilla.html">10 · Cartilla</a>
+        <a class="chip" href="panel-solicitudes.html">11 · Solicitudes</a>
+        <a class="chip" href="admin.html">12 · Admin</a>
+        <a class="chip" href="error.html">13 · Error</a>
+        <a class="chip" href="perfil.html">14 · Perfil</a>
+        <a class="chip" href="mi-cartilla.html">15 · Mi cartilla</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartilla digital de Kira · Protetec</title>
+  <meta name="description" content="Cartilla digital de una mascota adoptada: vacunas, tratamientos, alergias, personalidad y observaciones.">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="icon" href="assets/logo-protetec-negro.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="mock-banner">Maqueta de diseño · Fase 3 · Pantalla 15 de 15 · Lectura para el adoptante; edita el personal (ADR-07)</div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/logo-protetec-negro.svg" alt="" width="32" height="32">Protetec</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html">Mis solicitudes</a>
+        <a href="perfil.html" aria-current="page">Mi cuenta</a>
+      </nav>
+      <div class="header-actions">
+        <span class="avatar" aria-hidden="true">CP</span>
+        <a class="btn btn--sm" href="acceso.html">Cerrar sesión</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="menu-movil" class="mobile-nav" data-mobile-nav data-open="false" aria-label="Navegación móvil">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html">Mis solicitudes</a>
+        <a href="perfil.html" aria-current="page">Mi cuenta</a>
+        <a href="acceso.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container section section--tight">
+    <ol class="breadcrumb">
+      <li><a href="perfil.html">Mi perfil</a></li>
+      <li><a href="perfil.html">Mis mascotas</a></li>
+      <li><span aria-current="page">Kira</span></li>
+    </ol>
+
+    <!-- Cabecera del animal -->
+    <div class="card mb-5">
+      <div class="card__body row" style="align-items:center;gap:var(--s-4)">
+        <div class="photo photo--a photo--thumb" style="width:72px;height:72px" role="img" aria-label="Kira, perra mestiza de pelo claro"></div>
+        <div style="flex:1;min-width:220px">
+          <h1 class="mb-2" style="font-size:var(--fs-h3)">Cartilla de Kira</h1>
+          <p class="small muted mb-0">Perra · Mestiza · 4 años · 18,4 kg · Chip 941000098765432 · Protectora de Valencia</p>
+          <p class="small muted mb-0">Adoptada el 12/04/2025 · Cartilla actualizada el 02/11/2026</p>
+        </div>
+        <div class="row" style="gap:8px">
+          <span class="badge badge--warn">Vacuna pendiente</span>
+          <span class="badge badge--ok">Esterilizada</span>
+          <button class="btn btn--sm" type="button">Descargar PDF</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert--warn">
+      <div>
+        <strong>Polivalente pendiente · vence el 28/11/2026</strong>
+        Pide cita en la Clínica Alboraya. Cuando el veterinario registre la dosis, la protectora actualizará la cartilla y el aviso desaparecerá.
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Secciones de la cartilla">
+      <a href="#resumen" role="tab" aria-current="page">Resumen</a>
+      <a href="#tratamientos" role="tab">Tratamientos (4)</a>
+      <a href="#alergias" role="tab">Alergias (2)</a>
+      <a href="#personalidad" role="tab">Personalidad</a>
+      <a href="#observaciones" role="tab">Observaciones</a>
+      <a href="#vacunas" role="tab">Vacunas (4)</a>
+    </div>
+
+    <div class="split split--side">
+      <div>
+        <!-- Resumen -->
+        <section class="card mb-5" id="resumen" aria-labelledby="titulo-resumen">
+          <div class="card__header">
+            <h2 id="titulo-resumen">Resumen</h2>
+            <span class="badge badge--neutral">Solo lectura</span>
+          </div>
+          <div class="card__body">
+            <div class="split split--2">
+              <dl class="detail-list">
+                <div><dt>Especie</dt><dd>Perra</dd></div>
+                <div><dt>Raza</dt><dd>Mestiza</dd></div>
+                <div><dt>Sexo</dt><dd>Hembra</dd></div>
+                <div><dt>Nacimiento</dt><dd>03/2022 (aproximado)</dd></div>
+                <div><dt>Edad</dt><dd>4 años</dd></div>
+              </dl>
+              <dl class="detail-list">
+                <div><dt>Peso actual</dt><dd>18,4 kg</dd></div>
+                <div><dt>Microchip</dt><dd>941000098765432</dd></div>
+                <div><dt>Esterilización</dt><dd>12/05/2023</dd></div>
+                <div><dt>Protectora</dt><dd>Protectora de Valencia</dd></div>
+                <div><dt>Fecha de adopción</dt><dd>12/04/2025</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="card__footer">
+            <p class="small muted mb-0">Los datos clínicos los mantiene la protectora; si ves algo desactualizado, escríbeles desde la ficha de contacto.</p>
+          </div>
+        </section>
+
+        <!-- Tratamientos -->
+        <section class="card mb-5" id="tratamientos" aria-labelledby="titulo-tratamientos">
+          <div class="card__header">
+            <h2 id="titulo-tratamientos">Tratamientos</h2>
+            <span class="badge badge--info">1 en curso</span>
+          </div>
+          <div class="card__body">
+            <h3 class="mb-3" style="font-size:var(--fs-h4)">En curso</h3>
+            <div class="table-wrap">
+              <table class="table table--stack">
+                <caption class="visually-hidden">Tratamiento activo</caption>
+                <thead>
+                  <tr><th scope="col">Medicamento</th><th scope="col">Pauta</th><th scope="col">Inicio</th><th scope="col">Fin previsto</th><th scope="col">Motivo</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Medicamento"><span style="font-weight:600">Apoquel</span></td>
+                    <td data-label="Pauta">16 mg cada 12 h</td>
+                    <td data-label="Inicio" class="num">01/10/2026</td>
+                    <td data-label="Fin previsto" class="num"><span class="badge badge--info">30/11/2026</span></td>
+                    <td data-label="Motivo">Dermatitis atópica</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small muted mt-3 mb-0">Quedan 12 días de pauta. No suspender antes de la revisión del 01/12/2026.</p>
+
+            <h3 class="mt-5 mb-3" style="font-size:var(--fs-h4)">Anteriores</h3>
+            <div class="table-wrap">
+              <table class="table table--stack">
+                <caption class="visually-hidden">Tratamientos terminados, de más reciente a más antiguo</caption>
+                <thead>
+                  <tr><th scope="col">Medicamento</th><th scope="col">Pauta</th><th scope="col">Inicio</th><th scope="col">Fin</th><th scope="col">Motivo</th><th scope="col">Veterinario</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Medicamento"><span style="font-weight:600">Amoxicilina</span></td>
+                    <td data-label="Pauta">250 mg cada 24 h</td>
+                    <td data-label="Inicio" class="num">12/03/2026</td>
+                    <td data-label="Fin" class="num">26/03/2026</td>
+                    <td data-label="Motivo">Otitis</td>
+                    <td data-label="Veterinario">Clínica Alboraya</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Medicamento"><span style="font-weight:600">Prazicuantel</span></td>
+                    <td data-label="Pauta">1 comprimido, dosis única</td>
+                    <td data-label="Inicio" class="num">15/01/2026</td>
+                    <td data-label="Fin" class="num">15/01/2026</td>
+                    <td data-label="Motivo">Desparasitación interna</td>
+                    <td data-label="Veterinario">Clínica Alboraya</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Medicamento"><span style="font-weight:600">Meloxicam</span></td>
+                    <td data-label="Pauta">0,5 mg cada 24 h</td>
+                    <td data-label="Inicio" class="num">05/11/2025</td>
+                    <td data-label="Fin" class="num">10/11/2025</td>
+                    <td data-label="Motivo">Postoperatorio</td>
+                    <td data-label="Veterinario">Clínica Alboraya</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Alergias -->
+        <section class="card mb-5" id="alergias" aria-labelledby="titulo-alergias">
+          <div class="card__header">
+            <h2 id="titulo-alergias">Alergias</h2>
+            <span class="badge badge--neutral">2 registradas</span>
+          </div>
+          <div class="card__body">
+            <div class="table-wrap">
+              <table class="table table--stack">
+                <thead><tr><th scope="col">Alérgeno</th><th scope="col">Gravedad</th><th scope="col">Reacción</th><th scope="col">Registrada</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Alérgeno"><span style="font-weight:600">Pollo</span></td>
+                    <td data-label="Gravedad"><span class="badge badge--warn">Moderada</span></td>
+                    <td data-label="Reacción">Digestiva: vómitos y heces blandas</td>
+                    <td data-label="Registrada" class="num">18/06/2025</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Alérgeno"><span style="font-weight:600">Pulgas</span></td>
+                    <td data-label="Gravedad"><span class="badge badge--neutral">Leve</span></td>
+                    <td data-label="Reacción">Dermatitis en la base de la cola</td>
+                    <td data-label="Registrada" class="num">22/09/2025</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert--info mt-4 mb-0">
+              <div>
+                <strong>Qué se publica</strong>
+                Solo las alergias graves aparecen en la ficha pública del catálogo. Las demás quedan en la cartilla privada (ADR-07).
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Personalidad -->
+        <section class="card mb-5" id="personalidad" aria-labelledby="titulo-personalidad">
+          <div class="card__header"><h2 id="titulo-personalidad">Personalidad</h2></div>
+          <div class="card__body">
+            <p>
+              Muy sociable con las personas y con otros perros; busca contacto y se tumba a los pies en cuanto entra alguien en casa.
+              Juguetona hasta el agotamiento con la pelota y muy apegada a su familia. Tiene miedo a los petardos y a los ruidos
+              fuertes, por lo que conviene cerrar ventanas y dejarle un espacio tranquilo esos días.
+            </p>
+            <div class="chip-row mt-4" style="margin-bottom:0">
+              <span class="chip">Sociable</span>
+              <span class="chip">Juguetona</span>
+              <span class="chip">Apegada</span>
+              <span class="chip">Miedo a petardos</span>
+              <span class="chip">Se lleva bien con niños</span>
+              <span class="chip">Reactiva con gatos</span>
+            </div>
+          </div>
+          <div class="card__footer">
+            <p class="small muted mb-0">La valoración de carácter la registró la protectora tras dos meses en el centro y se actualiza con las observaciones de la familia.</p>
+          </div>
+        </section>
+
+        <!-- Observaciones -->
+        <section class="card mb-5" id="observaciones" aria-labelledby="titulo-observaciones">
+          <div class="card__header"><h2 id="titulo-observaciones">Observaciones</h2></div>
+          <div class="card__body">
+            <dl class="detail-list">
+              <div><dt>Alimentación</dt><dd>Pienso hipoalergénico de pavo, 260 g/día</dd></div>
+              <div><dt>Paseos</dt><dd>Tres salidas diarias; una de 45 min</dd></div>
+              <div><dt>Transporte</dt><dd>Se marea en coche: viajar en ayunas y con ventanilla entreabierta</dd></div>
+              <div><dt>Convivencia</dt><dd>Sin gatos; tolera bien a otros perros tranquilos</dd></div>
+              <div><dt>Cuidados</dt><dd>Cepillado dos veces por semana; revisión de oídos mensual</dd></div>
+            </dl>
+          </div>
+          <div class="card__footer">
+            <p class="small muted mb-0">Notas de la protectora y de la familia adoptante. No se publican en el catálogo.</p>
+          </div>
+        </section>
+
+        <!-- Vacunas -->
+        <section class="card mb-5" id="vacunas" aria-labelledby="titulo-vacunas">
+          <div class="card__header">
+            <h2 id="titulo-vacunas">Vacunas</h2>
+            <span class="badge badge--warn">1 pendiente</span>
+          </div>
+          <div class="card__body">
+            <div class="table-wrap">
+              <table class="table table--stack">
+                <caption class="visually-hidden">Vacunas registradas, de más reciente a más antigua</caption>
+                <thead>
+                  <tr><th scope="col">Tipo</th><th scope="col">Fecha</th><th scope="col">Próxima dosis</th><th scope="col">Veterinario</th><th scope="col">Lote</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Tipo"><span style="font-weight:600">Polivalente</span></td>
+                    <td data-label="Fecha" class="num">10/02/2026</td>
+                    <td data-label="Próxima dosis" class="num"><span class="badge badge--danger">28/11/2026</span></td>
+                    <td data-label="Veterinario">Clínica Alboraya</td>
+                    <td data-label="Lote">A-2291</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Tipo"><span style="font-weight:600">Rabia</span></td>
+                    <td data-label="Fecha" class="num">10/02/2026</td>
+                    <td data-label="Próxima dosis" class="num">10/02/2027</td>
+                    <td data-label="Veterinario">Clínica Alboraya</td>
+                    <td data-label="Lote">R-8842</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Tipo"><span style="font-weight:600">Tos de las perreras</span></td>
+                    <td data-label="Fecha" class="num">03/06/2026</td>
+                    <td data-label="Próxima dosis" class="num">03/06/2027</td>
+                    <td data-label="Veterinario">Clínica Alboraya</td>
+                    <td data-label="Lote">T-1180</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Tipo"><span style="font-weight:600">Leishmania</span></td>
+                    <td data-label="Fecha" class="num">10/02/2026</td>
+                    <td data-label="Próxima dosis" class="num">10/02/2027</td>
+                    <td data-label="Veterinario">Clínica Alboraya</td>
+                    <td data-label="Lote">L-0457</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card__footer">
+            <p class="small muted mb-0">Fechas en formato <code>dd/mm/aaaa</code>. La cartilla se actualiza cuando el veterinario registra la dosis en la protectora.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Lateral -->
+      <aside aria-labelledby="titulo-estado">
+        <div class="card">
+          <div class="card__header"><h2 id="titulo-estado" style="font-size:var(--fs-h4)">Estado sanitario</h2></div>
+          <div class="card__body">
+            <div class="row" style="gap:8px">
+              <span class="badge badge--warn">1 vacuna pendiente</span>
+              <span class="badge badge--ok">Esterilizada</span>
+              <span class="badge badge--ok">Con chip</span>
+            </div>
+            <dl class="detail-list mt-4">
+              <div><dt>Vacunas al día</dt><dd>No · falta la polivalente</dd></div>
+              <div><dt>Alergia grave</dt><dd>No</dd></div>
+              <div><dt>Tratamiento activo</dt><dd>Sí · Apoquel</dd></div>
+              <div><dt>Peso</dt><dd>18,4 kg</dd></div>
+              <div><dt>Última revisión</dt><dd>02/11/2026</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="card__body">
+            <h3 style="font-size:var(--fs-h4)">Próximas citas</h3>
+            <ol class="timeline">
+              <li data-state="current">
+                <p class="timeline__title">Polivalente</p>
+                <p class="timeline__meta">28/11/2026 · Clínica Alboraya</p>
+              </li>
+              <li>
+                <p class="timeline__title">Revisión del tratamiento</p>
+                <p class="timeline__meta">01/12/2026 · dermatología</p>
+              </li>
+              <li>
+                <p class="timeline__title">Revisión anual</p>
+                <p class="timeline__meta">12/04/2027 · analítica incluida</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="card__body">
+            <h3 style="font-size:var(--fs-h4)">Documentación</h3>
+            <p class="small muted">Descargas disponibles mientras la adopción esté activa.</p>
+            <div class="stack">
+              <a class="btn btn--sm btn--block" href="#vacunas">Carné veterinario (PDF)</a>
+              <a class="btn btn--sm btn--block" href="#resumen">Contrato de adopción (PDF)</a>
+              <a class="btn btn--sm btn--block" href="#tratamientos">Historial completo (PDF)</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4" id="contacto">
+          <div class="card__body">
+            <h3 style="font-size:var(--fs-h4)">Contacto</h3>
+            <dl class="detail-list">
+              <div><dt>Protectora</dt><dd>Protectora de Valencia</dd></div>
+              <div><dt>Correo</dt><dd>hola@protectoravalencia.org</dd></div>
+              <div><dt>Teléfono</dt><dd>+34 960 000 000</dd></div>
+              <div><dt>Veterinaria</dt><dd>Clínica Alboraya</dd></div>
+            </dl>
+            <a class="btn btn--sm btn--block mt-4" href="error.html">Escribir a la protectora</a>
+          </div>
+        </div>
+
+        <div class="alert alert--info mt-4">
+          <div>
+            <strong>Cartilla de solo lectura</strong>
+            Solo el personal de la protectora puede añadir vacunas, tratamientos o alergias. Tú puedes descargar los documentos y avisar de un error.
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff"><img class="brand__mark" src="assets/logo-protetec-blanco.svg" alt="" width="32" height="32">Protetec</a>
+          <p class="mt-3" style="color:#a8c4b9;max-width:32ch">Adopciones responsables con cartilla digital. Proyecto Intermodular · 2.º DAW.</p>
+        </div>
+        <div><h4>Adoptar</h4><ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#como-funciona">Cómo adoptar</a></li><li><a href="mis-solicitudes.html">Mis solicitudes</a></li></ul></div>
+        <div><h4>Protectoras</h4><ul><li><a href="panel.html">Panel</a></li><li><a href="cartilla.html">Cartilla digital</a></li><li><a href="admin.html">Administración</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="error.html">Privacidad</a></li><li><a href="error.html">Cookies</a></li><li><a href="error.html">Accesibilidad</a></li></ul></div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Protetec · Guillermo Morcillo, Iker Valls, Xavi Roca</span>
+        <span>Maqueta de diseño, sin funcionalidad real</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mock-index" aria-label="Índice de maquetas de la fase 3">
+    <div class="container">
+      <p class="mock-index__title">Maquetas · 15 pantallas</p>
+      <div class="chip-row" style="margin:0">
+        <a class="chip" href="index.html">1 · Inicio</a>
+        <a class="chip" href="catalogo.html">2 · Catálogo</a>
+        <a class="chip" href="ficha.html">3 · Ficha</a>
+        <a class="chip" href="solicitud.html">4 · Solicitud</a>
+        <a class="chip" href="acceso.html">5 · Acceso</a>
+        <a class="chip" href="confirmacion.html">6 · Confirmación</a>
+        <a class="chip" href="mis-solicitudes.html">7 · Mis solicitudes</a>
+        <a class="chip" href="panel.html">8 · Panel</a>
+        <a class="chip" href="panel-animales.html">9 · Animales</a>
+        <a class="chip" href="cartilla.html">10 · Cartilla</a>
+        <a class="chip" href="panel-solicitudes.html">11 · Solicitudes</a>
+        <a class="chip" href="admin.html">12 · Admin</a>
+        <a class="chip" href="error.html">13 · Error</a>
+        <a class="chip" href="perfil.html">14 · Perfil</a>
+        <a class="chip" href="mi-cartilla.html" aria-current="page">15 · Mi cartilla</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis solicitudes · Protetec</title>
+  <meta name="description" content="Consulta el estado de tus solicitudes de adopción.">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="icon" href="assets/logo-protetec-negro.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="mock-banner">Maqueta de diseño · Fase 3 · Pantalla 7 de 15 · Estado en tiempo real con línea de tiempo</div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/logo-protetec-negro.svg" alt="" width="32" height="32">Protetec</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html" aria-current="page">Mis solicitudes</a>
+        <a href="perfil.html">Mi cuenta</a>
+      </nav>
+      <div class="header-actions">
+        <span class="avatar" aria-hidden="true">CP</span>
+        <a class="btn btn--sm" href="acceso.html">Cerrar sesión</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="menu-movil" class="mobile-nav" data-mobile-nav data-open="false" aria-label="Navegación móvil">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html" aria-current="page">Mis solicitudes</a>
+        <a href="perfil.html">Mi cuenta</a>
+        <a href="acceso.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="page-head">
+      <div class="container">
+        <h1>Mis solicitudes</h1>
+        <p>Tres solicitudes · dos activas. Carlos Pérez · carlos@example.com</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="split split--side">
+        <!-- Lista -->
+        <section aria-labelledby="lista-titulo">
+          <h2 id="lista-titulo" class="visually-hidden">Listado de solicitudes</h2>
+
+          <div class="toolbar">
+            <div class="tabs tabs--pills" role="tablist" aria-label="Filtrar por estado">
+              <a href="#todas" role="tab" aria-current="page">Todas (3)</a>
+              <a href="#activas" role="tab">Activas (2)</a>
+              <a href="#resueltas" role="tab">Resueltas (1)</a>
+            </div>
+            <a class="btn btn--sm" href="catalogo.html">Solicitar otra adopción</a>
+          </div>
+
+          <div class="stack">
+            <!-- Activa: pendiente -->
+            <article class="card" aria-labelledby="sol-1">
+              <div class="card__body">
+                <div class="row row--between row--top">
+                  <div class="row" style="gap:var(--s-3);align-items:flex-start">
+                    <div class="photo photo--a photo--thumb" role="img" aria-label="Luna, perra mestiza de pelo claro"></div>
+                    <div>
+                      <h3 id="sol-1" class="mb-0" style="font-size:var(--fs-h4)">Luna</h3>
+                      <p class="small muted mb-0">SOL-2026-00412 · enviada el 15/11/2026</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--warn">Pendiente</span>
+                </div>
+                <p class="small mt-4 mb-3">La Protectora de Valencia todavía no ha revisado tu solicitud. Suele responder en 2–3 días laborables.</p>
+                <div class="row">
+                  <a class="btn btn--sm btn--primary" href="#detalle-luna">Ver detalle</a>
+                  <button class="btn btn--sm btn--danger" type="button">Cancelar solicitud</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Activa: en revisión -->
+            <article class="card" aria-labelledby="sol-2">
+              <div class="card__body">
+                <div class="row row--between row--top">
+                  <div class="row" style="gap:var(--s-3);align-items:flex-start">
+                    <div class="photo photo--b photo--thumb" role="img" aria-label="Milo, gato atigrado naranja"></div>
+                    <div>
+                      <h3 id="sol-2" class="mb-0" style="font-size:var(--fs-h4)">Milo</h3>
+                      <p class="small muted mb-0">SOL-2026-00398 · enviada el 09/11/2026</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--info">En revisión</span>
+                </div>
+                <p class="small mt-4 mb-3">La protectora está revisando tu solicitud y puede que te llame al teléfono que indicaste.</p>
+                <div class="row">
+                  <a class="btn btn--sm" href="#detalle-milo">Ver detalle</a>
+                  <button class="btn btn--sm btn--danger" type="button">Cancelar solicitud</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Resuelta: rechazada -->
+            <article class="card" aria-labelledby="sol-3">
+              <div class="card__body">
+                <div class="row row--between row--top">
+                  <div class="row" style="gap:var(--s-3);align-items:flex-start">
+                    <div class="photo photo--c photo--thumb" role="img" aria-label="Nube, coneja blanca de orejas largas"></div>
+                    <div>
+                      <h3 id="sol-3" class="mb-0" style="font-size:var(--fs-h4)">Nube</h3>
+                      <p class="small muted mb-0">SOL-2026-00321 · enviada el 21/10/2026</p>
+                    </div>
+                  </div>
+                  <span class="badge badge--danger">Rechazada</span>
+                </div>
+                <div class="alert alert--warn mt-4 mb-3">
+                  <div>
+                    <strong>Motivo indicado por la protectora</strong>
+                    El Refugio El Almendro busca para Nube una vivienda sin gatos, por su carácter territorial. Puedes solicitarla de nuevo si cambian tus circunstancias.
+                  </div>
+                </div>
+                <div class="row">
+                  <a class="btn btn--sm" href="#detalle-nube">Ver detalle</a>
+                  <a class="btn btn--sm btn--ghost" href="catalogo.html">Buscar otros animales</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Estado vacío (documentado) -->
+            <div class="empty">
+              <div class="empty__icon" aria-hidden="true">0</div>
+              <h3>No tienes solicitudes todavía</h3>
+              <p>Cuando envíes una, podrás seguir aquí cada cambio de estado sin llamar a la protectora.</p>
+              <a class="btn btn--primary" href="catalogo.html">Ver animales en adopción</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Detalle -->
+        <aside aria-labelledby="detalle-titulo">
+          <div class="card">
+            <div class="card__header">
+              <h2 id="detalle-titulo" style="font-size:var(--fs-h4)">Detalle · Luna</h2>
+              <span class="badge badge--warn">Pendiente</span>
+            </div>
+            <div class="card__body">
+              <dl class="detail-list">
+                <div><dt>Referencia</dt><dd>SOL-2026-00412</dd></div>
+                <div><dt>Animal</dt><dd>Luna</dd></div>
+                <div><dt>Protectora</dt><dd>Protectora de Valencia</dd></div>
+                <div><dt>Enviada</dt><dd>15/11/2026 · 18:42</dd></div>
+                <div><dt>Consentimiento</dt><dd>15/11/2026 · 18:42</dd></div>
+              </dl>
+
+              <h3 class="mt-5" style="font-size:var(--fs-h4)">Historial</h3>
+              <ol class="timeline">
+                <li data-state="current">
+                  <p class="timeline__title">Solicitud creada</p>
+                  <p class="timeline__meta">15/11/2026 · 18:42 · sistema</p>
+                </li>
+              </ol>
+
+              <h3 class="mt-5" style="font-size:var(--fs-h4)">Tus respuestas</h3>
+              <dl class="detail-list">
+                <div><dt>Vivienda</dt><dd>Piso de alquiler</dd></div>
+                <div><dt>Permite animales</dt><dd>Sí</dd></div>
+                <div><dt>Horas solo</dt><dd>6 h/día</dd></div>
+                <div><dt>Niños en casa</dt><dd>No</dd></div>
+                <div><dt>Otras mascotas</dt><dd>Un gato de 6 años</dd></div>
+              </dl>
+
+              <a class="btn btn--block mt-4" href="ficha.html">Ver la ficha de Luna</a>
+            </div>
+            <div class="card__footer">
+              <p class="small muted mb-0">Puedes cancelar mientras esté pendiente o en revisión. Una vez aprobada, contacta con la protectora.</p>
+            </div>
+          </div>
+
+          <div class="card mt-4">
+            <div class="card__body">
+              <h3 style="font-size:var(--fs-h4)">Contacto de la protectora</h3>
+              <p class="small muted">El teléfono y el correo completos se muestran solo cuando la solicitud se aprueba (CA-08.3).</p>
+              <dl class="detail-list">
+                <div><dt>Protectora</dt><dd>Protectora de Valencia</dd></div>
+                <div><dt>Teléfono</dt><dd class="muted">Se muestra al aprobar</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="alert alert--info mt-4">
+            <div>
+              <strong>Línea de tiempo real</strong>
+              Cada cambio lo registra la protectora con fecha y autor; tú no puedes modificarlo.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff"><img class="brand__mark" src="assets/logo-protetec-blanco.svg" alt="" width="32" height="32">Protetec</a>
+          <p class="mt-3" style="color:#a8c4b9;max-width:32ch">Adopciones responsables con cartilla digital. Proyecto Intermodular · 2.º DAW.</p>
+        </div>
+        <div><h4>Adoptar</h4><ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#como-funciona">Cómo adoptar</a></li><li><a href="mis-solicitudes.html">Mis solicitudes</a></li></ul></div>
+        <div><h4>Protectoras</h4><ul><li><a href="panel.html">Panel</a></li><li><a href="cartilla.html">Cartilla digital</a></li><li><a href="admin.html">Administración</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="error.html">Privacidad</a></li><li><a href="error.html">Cookies</a></li><li><a href="error.html">Accesibilidad</a></li></ul></div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Protetec · Guillermo Morcillo, Iker Valls, Xavi Roca</span>
+        <span>Maqueta de diseño, sin funcionalidad real</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mock-index" aria-label="Índice de maquetas de la fase 3">
+    <div class="container">
+      <p class="mock-index__title">Maquetas · 15 pantallas</p>
+      <div class="chip-row" style="margin:0">
+        <a class="chip" href="index.html">1 · Inicio</a>
+        <a class="chip" href="catalogo.html">2 · Catálogo</a>
+        <a class="chip" href="ficha.html">3 · Ficha</a>
+        <a class="chip" href="solicitud.html">4 · Solicitud</a>
+        <a class="chip" href="acceso.html">5 · Acceso</a>
+        <a class="chip" href="confirmacion.html">6 · Confirmación</a>
+        <a class="chip" href="mis-solicitudes.html" aria-current="page">7 · Mis solicitudes</a>
+        <a class="chip" href="panel.html">8 · Panel</a>
+        <a class="chip" href="panel-animales.html">9 · Animales</a>
+        <a class="chip" href="cartilla.html">10 · Cartilla</a>
+        <a class="chip" href="panel-solicitudes.html">11 · Solicitudes</a>
+        <a class="chip" href="admin.html">12 · Admin</a>
+        <a class="chip" href="error.html">13 · Error</a>
+        <a class="chip" href="perfil.html">14 · Perfil</a>
+        <a class="chip" href="mi-cartilla.html">15 · Mi cartilla</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

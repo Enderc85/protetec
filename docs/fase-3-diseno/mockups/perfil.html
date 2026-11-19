@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi perfil · Protetec</title>
+  <meta name="description" content="Perfil del adoptante: datos de la cuenta, mascotas adoptadas y consejos de salud.">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="icon" href="assets/logo-protetec-negro.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="mock-banner">Maqueta de diseño · Fase 3 · Pantalla 14 de 15 · Perfil del adoptante con sus mascotas y cartillas</div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/logo-protetec-negro.svg" alt="" width="32" height="32">Protetec</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html">Mis solicitudes</a>
+        <a href="perfil.html" aria-current="page">Mi cuenta</a>
+      </nav>
+      <div class="header-actions">
+        <span class="avatar" aria-hidden="true">CP</span>
+        <a class="btn btn--sm" href="acceso.html">Cerrar sesión</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="menu-movil" class="mobile-nav" data-mobile-nav data-open="false" aria-label="Navegación móvil">
+        <a href="catalogo.html">Animales</a>
+        <a href="mis-solicitudes.html">Mis solicitudes</a>
+        <a href="perfil.html" aria-current="page">Mi cuenta</a>
+        <a href="acceso.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="page-head">
+      <div class="container">
+        <h1>Mi perfil</h1>
+        <p>Tu cuenta, las mascotas que has adoptado y el acceso a sus cartillas digitales.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Perfil principal -->
+      <section class="card" aria-labelledby="perfil-nombre">
+        <div class="card__body profile">
+          <div class="profile__avatar" role="img" aria-label="Foto de perfil de Carlos Pérez">CP</div>
+          <div class="profile__info">
+            <h2 id="perfil-nombre">Carlos Pérez</h2>
+            <p class="small muted">carlos@example.com · Valencia</p>
+            <p class="small muted mt-2 mb-0">
+              Miembro desde el <strong>14 de marzo de 2025</strong> ·
+              <span class="badge badge--brand">3 mascotas adoptadas</span>
+            </p>
+          </div>
+          <div class="profile__actions">
+            <a class="btn btn--sm" href="#datos-cuenta">Editar perfil</a>
+            <a class="btn btn--sm btn--ghost" href="mis-solicitudes.html">Mis solicitudes</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mascotas -->
+      <section class="mt-6" aria-labelledby="mascotas-titulo">
+        <div class="row row--between">
+          <div>
+            <h2 id="mascotas-titulo" class="mb-2">Mis mascotas</h2>
+            <p class="small muted mb-0">Pulsa en una mascota para abrir su cartilla digital: vacunas, tratamientos y alergias.</p>
+          </div>
+          <a class="btn btn--sm btn--primary" href="catalogo.html">Adoptar otra mascota</a>
+        </div>
+
+        <div class="card-grid card-grid--3 mt-4">
+          <!-- Kira -->
+          <a class="animal-card pet-card" href="mi-cartilla.html" aria-labelledby="pet-kira">
+            <div class="photo photo--a photo--card" role="img" aria-label="Kira, perra mestiza de pelo claro"></div>
+            <div class="animal-card__body">
+              <div class="row row--between" style="align-items:flex-start">
+                <h3 class="animal-card__title" id="pet-kira">Kira</h3>
+                <span class="badge badge--warn">1 vacuna pendiente</span>
+              </div>
+              <dl class="pet-meta">
+                <div><dt>Animal</dt><dd>Perra</dd></div>
+                <div><dt>Raza</dt><dd>Mestiza</dd></div>
+                <div><dt>Edad</dt><dd>4 años</dd></div>
+                <div><dt>Vacunas pendientes</dt><dd class="is-pending">Polivalente · 28/11/2026</dd></div>
+              </dl>
+              <span class="animal-card__footer">Ver cartilla digital <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <!-- Trufa -->
+          <a class="animal-card pet-card" href="mi-cartilla.html" aria-labelledby="pet-trufa">
+            <div class="photo photo--b photo--card" role="img" aria-label="Trufa, gata europea de pelo atigrado"></div>
+            <div class="animal-card__body">
+              <div class="row row--between" style="align-items:flex-start">
+                <h3 class="animal-card__title" id="pet-trufa">Trufa</h3>
+                <span class="badge badge--ok">Al día</span>
+              </div>
+              <dl class="pet-meta">
+                <div><dt>Animal</dt><dd>Gata</dd></div>
+                <div><dt>Raza</dt><dd>Europea común</dd></div>
+                <div><dt>Edad</dt><dd>2 años</dd></div>
+                <div><dt>Vacunas pendientes</dt><dd>Ninguna · próxima 20/09/2027</dd></div>
+              </dl>
+              <span class="animal-card__footer">Ver cartilla digital <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <!-- Bolo -->
+          <a class="animal-card pet-card" href="mi-cartilla.html" aria-labelledby="pet-bolo">
+            <div class="photo photo--c photo--card" role="img" aria-label="Bolo, conejo enano de color claro"></div>
+            <div class="animal-card__body">
+              <div class="row row--between" style="align-items:flex-start">
+                <h3 class="animal-card__title" id="pet-bolo">Bolo</h3>
+                <span class="badge badge--neutral">Revisión pendiente</span>
+              </div>
+              <dl class="pet-meta">
+                <div><dt>Animal</dt><dd>Conejo</dd></div>
+                <div><dt>Raza</dt><dd>Enano holandés</dd></div>
+                <div><dt>Edad</dt><dd>1 año</dd></div>
+                <div><dt>Vacunas pendientes</dt><dd>Ninguna · revisión dental 02/12/2026</dd></div>
+              </dl>
+              <span class="animal-card__footer">Ver cartilla digital <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+
+        <p class="small muted mt-3 mb-0">
+          Las tres cartillas se abren en la misma plantilla de lectura; la maqueta muestra la de Kira, que es la única con una dosis pendiente.
+        </p>
+      </section>
+
+      <!-- Consejos de salud -->
+      <aside class="tips" aria-labelledby="tips-titulo">
+        <div class="tips__head">
+          <span class="tips__icon" aria-hidden="true">+</span>
+          <div>
+            <h2 id="tips-titulo">Consejos de salud para tus mascotas</h2>
+            <p class="small muted">Cuatro recordatorios que la protectora repite en cada adopción.</p>
+          </div>
+        </div>
+        <ul class="tips__list">
+          <li>
+            <strong>Vacunas y desparasitación</strong>
+            Revisa la próxima dosis en la cartilla. La desparasitación interna se repite cada tres meses y la externa, según el producto.
+          </li>
+          <li>
+            <strong>Golpe de calor</strong>
+            En verano, pasea antes de las 11 h o después de las 20 h. Nunca dejes al animal en el coche, ni con las ventanillas bajadas.
+          </li>
+          <li>
+            <strong>Peso y alimentación</strong>
+            Pesa a tu mascota una vez al mes y ajusta la ración a su edad y actividad. El pienso se cambia de forma gradual en una semana.
+          </li>
+          <li>
+            <strong>Señales de alarma</strong>
+            Decaimiento, falta de apetito, vómitos repetidos, cojera o sed excesiva: llama a tu veterinario ese mismo día.
+          </li>
+        </ul>
+        <p class="small muted mt-4 mb-0">
+          Consejos orientativos; no sustituyen la consulta veterinaria. Si detectas un error en una cartilla,
+          <a href="mi-cartilla.html#contacto">escribe a la protectora</a>.
+        </p>
+      </aside>
+
+      <!-- Datos de cuenta -->
+      <section class="card mt-6" id="datos-cuenta" aria-labelledby="cuenta-titulo">
+        <div class="card__header">
+          <h2 id="cuenta-titulo">Datos de la cuenta</h2>
+          <a class="btn btn--sm" href="#datos-cuenta">Cambiar contraseña</a>
+        </div>
+        <div class="card__body">
+          <div class="split split--2">
+            <dl class="detail-list">
+              <div><dt>Nombre</dt><dd>Carlos Pérez</dd></div>
+              <div><dt>Correo</dt><dd>carlos@example.com</dd></div>
+              <div><dt>Teléfono</dt><dd>+34 600 000 000</dd></div>
+            </dl>
+            <dl class="detail-list">
+              <div><dt>Localidad</dt><dd>Valencia</dd></div>
+              <div><dt>Alta</dt><dd>14/03/2025</dd></div>
+              <div><dt>Último acceso</dt><dd>18/11/2026 · 09:12</dd></div>
+            </dl>
+          </div>
+          <div class="alert alert--info mt-4 mb-0">
+            <div>
+              <strong>Privacidad</strong>
+              Tu correo y tu teléfono solo los ve la protectora con la que tienes una solicitud o una adopción en curso.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff"><img class="brand__mark" src="assets/logo-protetec-blanco.svg" alt="" width="32" height="32">Protetec</a>
+          <p class="mt-3" style="color:#a8c4b9;max-width:32ch">Adopciones responsables con cartilla digital. Proyecto Intermodular · 2.º DAW.</p>
+        </div>
+        <div><h4>Adoptar</h4><ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#como-funciona">Cómo adoptar</a></li><li><a href="mis-solicitudes.html">Mis solicitudes</a></li></ul></div>
+        <div><h4>Protectoras</h4><ul><li><a href="panel.html">Panel</a></li><li><a href="cartilla.html">Cartilla digital</a></li><li><a href="admin.html">Administración</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="error.html">Privacidad</a></li><li><a href="error.html">Cookies</a></li><li><a href="error.html">Accesibilidad</a></li></ul></div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Protetec · Guillermo Morcillo, Iker Valls, Xavi Roca</span>
+        <span>Maqueta de diseño, sin funcionalidad real</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mock-index" aria-label="Índice de maquetas de la fase 3">
+    <div class="container">
+      <p class="mock-index__title">Maquetas · 15 pantallas</p>
+      <div class="chip-row" style="margin:0">
+        <a class="chip" href="index.html">1 · Inicio</a>
+        <a class="chip" href="catalogo.html">2 · Catálogo</a>
+        <a class="chip" href="ficha.html">3 · Ficha</a>
+        <a class="chip" href="solicitud.html">4 · Solicitud</a>
+        <a class="chip" href="acceso.html">5 · Acceso</a>
+        <a class="chip" href="confirmacion.html">6 · Confirmación</a>
+        <a class="chip" href="mis-solicitudes.html">7 · Mis solicitudes</a>
+        <a class="chip" href="panel.html">8 · Panel</a>
+        <a class="chip" href="panel-animales.html">9 · Animales</a>
+        <a class="chip" href="cartilla.html">10 · Cartilla</a>
+        <a class="chip" href="panel-solicitudes.html">11 · Solicitudes</a>
+        <a class="chip" href="admin.html">12 · Admin</a>
+        <a class="chip" href="error.html">13 · Error</a>
+        <a class="chip" href="perfil.html" aria-current="page">14 · Perfil</a>
+        <a class="chip" href="mi-cartilla.html">15 · Mi cartilla</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

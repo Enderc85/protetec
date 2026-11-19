@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administración · Protetec</title>
+  <meta name="description" content="Administración de protectoras y cuentas de la plataforma.">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <link rel="icon" href="assets/logo-protetec-negro.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="mock-banner">Maqueta de diseño · Fase 3 · Pantalla 12 de 15 · Solo rol ADMIN; el rol nunca se elige desde el cliente</div>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html"><img class="brand__mark" src="assets/logo-protetec-negro.svg" alt="" width="32" height="32">Protetec</a>
+      <nav class="nav" aria-label="Navegación de administración">
+        <a href="admin.html" aria-current="page">Protectoras</a>
+        <a href="admin.html#usuarios">Usuarios</a>
+        <a href="panel.html">Ver panel</a>
+      </nav>
+      <div class="header-actions">
+        <span class="avatar" aria-hidden="true" style="background:var(--accent-100);color:var(--accent-700)">AD</span>
+        <a class="btn btn--sm" href="acceso.html">Salir</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="menu-movil">Menú</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav id="menu-movil" class="mobile-nav" data-mobile-nav data-open="false" aria-label="Navegación móvil de administración">
+        <a href="admin.html" aria-current="page">Protectoras</a>
+        <a href="admin.html#usuarios">Usuarios</a>
+        <a href="panel.html">Ver panel</a>
+        <a href="acceso.html">Salir</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="page-head">
+      <div class="container">
+        <div class="row row--between">
+          <div>
+            <h1>Administración</h1>
+            <p>Protectoras, cuentas de personal y roles de la plataforma.</p>
+          </div>
+          <span class="badge badge--brand">Rol ADMIN</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert--warn">
+        <div>
+          <strong>Acciones con consecuencias</strong>
+          Desactivar una protectora oculta todos sus animales del catálogo. Desactivar una cuenta de personal le impide entrar, pero conserva su historial. Cada acción queda registrada con actor, objetivo y fecha.
+        </div>
+      </div>
+
+      <!-- Protectoras -->
+      <section class="card mb-6" aria-labelledby="titulo-protectoras">
+        <div class="card__header">
+          <h2 id="titulo-protectoras">Protectoras</h2>
+          <button class="btn btn--sm btn--primary" type="button">Añadir protectora</button>
+        </div>
+        <div class="card__body">
+          <div class="table-wrap">
+            <table class="table table--stack">
+              <caption class="visually-hidden">Protectoras registradas en la plataforma</caption>
+              <thead>
+                <tr><th scope="col">Protectora</th><th scope="col">CIF</th><th scope="col">Animales</th><th scope="col">Cuentas</th><th scope="col">Estado</th><th scope="col" class="actions">Acciones</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Protectora"><span style="font-weight:600">Protectora de Valencia</span><br><span class="small muted">Camí de Vera, 12</span></td>
+                  <td data-label="CIF">G-46123456</td>
+                  <td data-label="Animales" class="num">24</td>
+                  <td data-label="Cuentas" class="num">6</td>
+                  <td data-label="Estado"><span class="badge badge--ok">Activa</span></td>
+                  <td data-label="Acciones" class="actions"><button class="btn btn--sm btn--ghost" type="button">Editar</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Protectora"><span style="font-weight:600">Refugio El Almendro</span><br><span class="small muted">Partida dels Olivers, 4</span></td>
+                  <td data-label="CIF">G-46123457</td>
+                  <td data-label="Animales" class="num">18</td>
+                  <td data-label="Cuentas" class="num">4</td>
+                  <td data-label="Estado"><span class="badge badge--ok">Activa</span></td>
+                  <td data-label="Acciones" class="actions"><button class="btn btn--sm btn--ghost" type="button">Editar</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Protectora"><span style="font-weight:600">Protectora de Sagunto</span><br><span class="small muted">Av. del Port, 88</span></td>
+                  <td data-label="CIF">G-46123458</td>
+                  <td data-label="Animales" class="num">0</td>
+                  <td data-label="Cuentas" class="num">3</td>
+                  <td data-label="Estado"><span class="badge badge--neutral">Inactiva</span></td>
+                  <td data-label="Acciones" class="actions"><button class="btn btn--sm btn--ghost" type="button">Reactivar</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small muted mt-3 mb-0">Una protectora inactiva no publica animales en el catálogo (RI-16), aunque sus datos e historial se conservan.</p>
+        </div>
+      </section>
+
+      <!-- Alta de protectora -->
+      <section class="card mb-6" aria-labelledby="titulo-nueva-protectora">
+        <div class="card__header"><h2 id="titulo-nueva-protectora">Nueva protectora</h2></div>
+        <div class="card__body">
+          <form data-demo-form novalidate>
+            <div class="form-grid form-grid--2">
+              <div class="field">
+                <label class="label" for="p-nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="p-nombre" placeholder="Protectora de…">
+              </div>
+              <div class="field">
+                <label class="label" for="p-cif">CIF <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="p-cif" value="G-46123459" aria-invalid="true" aria-describedby="cif-error">
+                <p class="error-msg" id="cif-error">Ya existe una protectora con este CIF.</p>
+              </div>
+              <div class="field">
+                <label class="label" for="p-dir">Dirección <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="p-dir">
+              </div>
+              <div class="field">
+                <label class="label" for="p-tel">Teléfono <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="p-tel" type="tel" inputmode="tel">
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit" data-submit>Crear protectora</button>
+              <button class="btn" type="button">Cancelar</button>
+            </div>
+            <div class="alert alert--success mt-5" data-form-status hidden tabindex="-1">
+              <div><strong>Simulación: protectora creada</strong>Podrás asignarle cuentas de personal a continuación.</div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Usuarios -->
+      <section class="card mb-6" id="usuarios" aria-labelledby="titulo-usuarios">
+        <div class="card__header">
+          <h2 id="titulo-usuarios">Usuarios</h2>
+          <div class="row">
+            <input class="input" type="search" placeholder="Buscar por correo" aria-label="Buscar usuario por correo" style="min-width:220px">
+            <select class="select" aria-label="Filtrar por rol" style="width:auto">
+              <option>Todos los roles</option>
+              <option>Administrador</option>
+              <option>Protectora</option>
+              <option>Adoptante</option>
+            </select>
+          </div>
+        </div>
+        <div class="card__body">
+          <div class="table-wrap">
+            <table class="table table--stack">
+              <caption class="visually-hidden">Cuentas de usuario de la plataforma</caption>
+              <thead>
+                <tr><th scope="col">Usuario</th><th scope="col">Rol</th><th scope="col">Protectora</th><th scope="col">Estado</th><th scope="col">Alta</th><th scope="col" class="actions">Acciones</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Usuario"><span style="font-weight:600">Laura Gómez</span><br><span class="small muted">laura@protectoravalencia.org</span></td>
+                  <td data-label="Rol"><span class="badge badge--brand">Protectora</span></td>
+                  <td data-label="Protectora">Prot. Valencia</td>
+                  <td data-label="Estado"><span class="badge badge--ok">Activa</span></td>
+                  <td data-label="Alta" class="num">12/01/2026</td>
+                  <td data-label="Acciones" class="actions"><button class="btn btn--sm btn--ghost" type="button">Editar</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Usuario"><span style="font-weight:600">Marta Ruiz</span><br><span class="small muted">marta@example.com</span></td>
+                  <td data-label="Rol"><span class="badge badge--neutral">Adoptante</span></td>
+                  <td data-label="Protectora">—</td>
+                  <td data-label="Estado"><span class="badge badge--ok">Activa</span></td>
+                  <td data-label="Alta" class="num">03/09/2026</td>
+                  <td data-label="Acciones" class="actions"><button class="btn btn--sm btn--ghost" type="button">Editar</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Usuario"><span style="font-weight:600">Jorge Sanz</span><br><span class="small muted">jorge@almendro.org</span></td>
+                  <td data-label="Rol"><span class="badge badge--brand">Protectora</span></td>
+                  <td data-label="Protectora">El Almendro</td>
+                  <td data-label="Estado"><span class="badge badge--warn">Desactivada</span></td>
+                  <td data-label="Alta" class="num">18/02/2026</td>
+                  <td data-label="Acciones" class="actions"><button class="btn btn--sm btn--ghost" type="button">Reactivar</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Usuario"><span style="font-weight:600">Cuenta suprimida</span><br><span class="small muted">anonimo+412@protetec.invalid</span></td>
+                  <td data-label="Rol"><span class="badge badge--neutral">Adoptante</span></td>
+                  <td data-label="Protectora">—</td>
+                  <td data-label="Estado"><span class="badge badge--neutral">Anonimizada</span></td>
+                  <td data-label="Alta" class="num">07/05/2026</td>
+                  <td data-label="Acciones" class="actions"><span class="small muted">Sin acciones</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small muted mt-3 mb-0">La lista nunca devuelve el hash de la contraseña ni tokens. Las cuentas anonimizadas conservan el historial de adopciones (RI-09).</p>
+        </div>
+      </section>
+
+      <!-- Alta de personal -->
+      <section class="card mb-6" aria-labelledby="titulo-nuevo-usuario">
+        <div class="card__header">
+          <h2 id="titulo-nuevo-usuario">Crear cuenta de personal</h2>
+          <span class="badge badge--neutral">Rol fijo: PROTECTORA</span>
+        </div>
+        <div class="card__body">
+          <div class="alert alert--info">
+            <div>
+              <strong>El rol no se elige aquí</strong>
+              Este formulario crea siempre cuentas de personal asociadas a una protectora. Las cuentas de administrador solo se crean por semilla o por otro administrador de forma explícita.
+            </div>
+          </div>
+          <form data-demo-form novalidate>
+            <div class="form-grid form-grid--2">
+              <div class="field">
+                <label class="label" for="u-nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="u-nombre" placeholder="Nombre y apellidos">
+              </div>
+              <div class="field">
+                <label class="label" for="u-email">Correo <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="u-email" type="email" inputmode="email" placeholder="nombre@protectora.org">
+              </div>
+              <div class="field">
+                <label class="label" for="u-prot">Protectora <span class="req" aria-hidden="true">*</span></label>
+                <select class="select" id="u-prot" aria-describedby="u-prot-hint">
+                  <option value="">Selecciona</option>
+                  <option selected>Protectora de Valencia</option>
+                  <option>Refugio El Almendro</option>
+                </select>
+                <p class="hint" id="u-prot-hint">Obligatorio: el rol de protectora exige centro (RI-10).</p>
+              </div>
+              <div class="field">
+                <label class="label" for="u-pass">Contraseña temporal <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="u-pass" value="Cambiar2026">
+                <p class="hint">La persona deberá cambiarla en el primer acceso.</p>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit" data-submit>Crear cuenta</button>
+              <button class="btn" type="button">Cancelar</button>
+            </div>
+            <div class="alert alert--success mt-5" data-form-status hidden tabindex="-1">
+              <div><strong>Simulación: cuenta creada</strong>Se habría enviado la contraseña temporal por el cauce acordado con la protectora.</div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Reglas de la administración -->
+      <section class="card" aria-labelledby="reglas-admin">
+        <div class="card__header"><h2 id="reglas-admin">Reglas que la interfaz no puede saltarse</h2></div>
+        <div class="card__body">
+          <ul>
+            <li>No se puede desactivar la propia cuenta ni quedarse sin administradores activos (CA-10.5, CA-10.6).</li>
+            <li>Ninguna ruta <code>/api/v1/admin/*</code> responde a un rol distinto de <code>ADMIN</code>: devuelve 403 aunque la interfaz oculte el enlace.</li>
+            <li>El registro público nunca crea cuentas de personal ni de administración (ADR-05).</li>
+            <li>La supresión de una cuenta anonimiza los datos personales y conserva las solicitudes por trazabilidad (RF-12).</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff"><img class="brand__mark" src="assets/logo-protetec-blanco.svg" alt="" width="32" height="32">Protetec</a>
+          <p class="mt-3" style="color:#a8c4b9;max-width:32ch">Adopciones responsables con cartilla digital. Proyecto Intermodular · 2.º DAW.</p>
+        </div>
+        <div><h4>Adoptar</h4><ul><li><a href="catalogo.html">Catálogo</a></li><li><a href="index.html#como-funciona">Cómo adoptar</a></li><li><a href="mis-solicitudes.html">Mis solicitudes</a></li></ul></div>
+        <div><h4>Protectoras</h4><ul><li><a href="panel.html">Panel</a></li><li><a href="cartilla.html">Cartilla digital</a></li><li><a href="admin.html">Administración</a></li></ul></div>
+        <div><h4>Legal</h4><ul><li><a href="error.html">Privacidad</a></li><li><a href="error.html">Cookies</a></li><li><a href="error.html">Accesibilidad</a></li></ul></div>
+      </div>
+      <div class="footer-note">
+        <span>© 2026 Protetec · Guillermo Morcillo, Iker Valls, Xavi Roca</span>
+        <span>Maqueta de diseño, sin funcionalidad real</span>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mock-index" aria-label="Índice de maquetas de la fase 3">
+    <div class="container">
+      <p class="mock-index__title">Maquetas · 15 pantallas</p>
+      <div class="chip-row" style="margin:0">
+        <a class="chip" href="index.html">1 · Inicio</a>
+        <a class="chip" href="catalogo.html">2 · Catálogo</a>
+        <a class="chip" href="ficha.html">3 · Ficha</a>
+        <a class="chip" href="solicitud.html">4 · Solicitud</a>
+        <a class="chip" href="acceso.html">5 · Acceso</a>
+        <a class="chip" href="confirmacion.html">6 · Confirmación</a>
+        <a class="chip" href="mis-solicitudes.html">7 · Mis solicitudes</a>
+        <a class="chip" href="panel.html">8 · Panel</a>
+        <a class="chip" href="panel-animales.html">9 · Animales</a>
+        <a class="chip" href="cartilla.html">10 · Cartilla</a>
+        <a class="chip" href="panel-solicitudes.html">11 · Solicitudes</a>
+        <a class="chip" href="admin.html" aria-current="page">12 · Admin</a>
+        <a class="chip" href="error.html">13 · Error</a>
+        <a class="chip" href="perfil.html">14 · Perfil</a>
+        <a class="chip" href="mi-cartilla.html">15 · Mi cartilla</a>
+      </div>
+    </div>
+  </nav>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
