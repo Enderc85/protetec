@@ -10,6 +10,14 @@ Plataforma web para la gestión integral de protectoras de animales y el fomento
 | **Fase actual** | 3 · Diseño |
 | **Versión del diseño** | 1.0 — noviembre de 2026 |
 
+## Maquetas en vivo
+
+Las 15 pantallas están publicadas en **GitHub Pages**: <https://enderc85.github.io/protetec/>
+
+Se despliegan automáticamente desde `docs/fase-3-diseno/mockups/` con el flujo de trabajo [`.github/workflows/pages.yml`](.github/workflows/pages.yml) en cada cambio sobre esa carpeta.
+
+La entrega en Word y PDF está en [`docs/entrega/`](docs/entrega/).
+
 ## Documentación
 
 | Documento | Contenido |
