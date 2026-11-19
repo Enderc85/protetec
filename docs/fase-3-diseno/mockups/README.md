@@ -2,6 +2,8 @@
 
 Quince pantallas HTML que representan el diseño de interfaz de Protetec. No son la aplicación: no hay backend, ni base de datos, ni lógica de negocio. Sirven para **validar la estructura, los estados y los textos** antes de escribir el frontend real y como referencia visual durante la implementación.
 
+**Versión publicada:** <https://enderc85.github.io/protetec/> — se despliega automáticamente desde esta carpeta con GitHub Pages.
+
 ## Cómo abrirlas
 
 No hace falta servidor ni instalar nada.
